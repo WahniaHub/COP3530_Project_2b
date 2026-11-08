@@ -7,7 +7,7 @@ app.get('/COP3530_Project_2b',(request,response)=>{
     request.query;
    execFile("../sortify.exe", [request.query.category, request.query.algorithm, request.query.direction], { maxBuffer: 50 * 1024 * 1024}, (error, output, stderr) => {
     if (error) {
-        console.log(err);
+        console.log(error);
     }
     response.send(output);
     });
