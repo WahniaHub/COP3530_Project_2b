@@ -13,7 +13,7 @@ document.getElementById("sort").addEventListener("click", () => {
         document.getElementById("counter").innerHTML = tracks.shift();
         for (const track of tracks){
             const row = data.insertRow();
-            const categories = track.split(",")
+            const categories = track.split("|")
             for (const category of categories){
                 row.insertCell().innerHTML = category;
             }
