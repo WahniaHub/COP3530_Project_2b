@@ -10,6 +10,7 @@ document.getElementById("sort").addEventListener("click", () => {
         data.innerHTML = "";
 
         const tracks = output.trim().split("\n")
+        document.getElementById("counter").innerHTML = tracks.shift();
         for (const track of tracks){
             const row = data.insertRow();
             const categories = track.split(",")
