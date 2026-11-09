@@ -69,7 +69,7 @@ npm install
 node webnode.js
 ```
 
-Open the application at [http://localhost:3020](http://localhost:3020).
+Open the application at [http://localhost:3020/web.html](http://localhost:3020/web.html).
 
 ## Command-Line Usage
 
