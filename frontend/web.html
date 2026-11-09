@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+<html lang = "en">
 <head>
-    <title>Sortify</Title>
+    <meta charset="UTF-8">
+    <title>Sortify</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="text-align:center;">
-    <h1>Your Playlist</h1>
+<body>
+    <h1>The Great Playlist Sorter</h1>
+    <div id = "controls">
     <h2>Select Category
         <select id="category">
             <option value="artists">Artists</option>
@@ -30,11 +34,14 @@
         </select>
     </h2>
     <button type="button" id="sort">Click to Sort</button>
+    </div>
     <h3 id="counter">Comparisons:</h3>
+    <div id="table-wrap">
     <table>
-        <thead><tr><th>Artists</th><th>Track Name</th><th>Genre</th><th>duration</th><th>Popularity</th><th>Tempo</th><th>Energy</th><th>Dancibility</th></tr></thead>
+        <thead><tr><th>Artists</th><th>Track Name</th><th>Genre</th><th>Duration</th><th>Popularity</th><th>Tempo</th><th>Energy</th><th>Danceability</th></tr></thead>
         <tbody id="tableinfo"></tbody>
     </table>
+    </div>
     <script src="web.js"></script>
 </body>
 </html>

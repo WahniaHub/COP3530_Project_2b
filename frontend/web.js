@@ -6,7 +6,7 @@ document.getElementById("sort").addEventListener("click", () => {
     fetch(`/COP3530_Project_2b?category=${category}&algorithm=${algorithm}&direction=${direction}`)
     .then(res => res.text())
     .then(output=> {
-        data = document.getElementById("tableinfo");
+        const data = document.getElementById("tableinfo");
         data.innerHTML = "";
 
         const tracks = output.trim().split("\n")
@@ -14,8 +14,8 @@ document.getElementById("sort").addEventListener("click", () => {
         for (const track of tracks){
             const row = data.insertRow();
             const categories = track.split("|")
-            for (const category of categories){
-                row.insertCell().innerHTML = category;
+            for (const value of categories){
+                row.insertCell().textContent = value;
             }
         }
     });
