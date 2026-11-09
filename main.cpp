@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
               << (algorithm == "merge" ? "merge sort" : "quick sort")
               << ". Comparisons: " << comparisons << "\n";
 
-    const size_t tracksToPrint = tracks.size() < 10 ? tracks.size() : 10;
+    const size_t tracksToPrint = tracks.size() < 50 ? tracks.size() : 50;
     std::string direction = argv[3];
     if (direction == "descending"){
         std::reverse(tracks.begin(), tracks.end());
