@@ -20,7 +20,7 @@ static TrackComparator chooseComparator(std::string category) {
 
 static void printTrack(const Track& track) {
     std::cout << track.artist << "|" << track.trackName << "|" << track.genre << "|" << track.durationMs << "|" << track.popularity 
-    << "|" << track.tempo << "|" << track.energy << "|" << track.dancibility << '\n';
+    << "|" << track.tempo << "|" << track.energy << "|" << track.danceability << '\n';
 }
 
 int main(int argc, char* argv[]) {
@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
     std::string algorithm = argv[2];
 
     long long comparisons = 0;
-    if (algorithm == 1) {
+    if (algorithm == "merge") {
         tracks = mergeSort(tracks, comparisons, comparator);
     } else {
         quickSort(tracks, 0, static_cast<int>(tracks.size()) - 1,
@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
     
     std::cout << "\nSorted " << tracks.size() << " tracks using "
               << (algorithm == "merge" ? "merge sort" : "quick sort")
-              << ". Comparisons: " << comparisons << "\n\n";
+              << ". Comparisons: " << comparisons << "\n";
 
     const size_t tracksToPrint = tracks.size() < 10 ? tracks.size() : 10;
     std::string direction = argv[3];
